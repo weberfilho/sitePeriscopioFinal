@@ -12,9 +12,14 @@ public class Event {
     private String nameEvent;
     private String eventDescription;
     private String eventDate;
+    private String teste;
     private String eventStartTime;
     private String eventEndTime;
+    @ManyToOne
+    @JoinColumn(name = "promoter_id_promoter")
     private Promoter promoter;
+    @ManyToOne
+    @JoinColumn(name = "place_id_place")
     private Place place;
 
     public Event() {
